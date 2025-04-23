@@ -20,6 +20,8 @@ public class SensorDataController {
     @Autowired
     private SensorDataService mqttService;
 
+    private MqttAsyncClient mqttClient;
+
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
     @PostMapping("/publish")
