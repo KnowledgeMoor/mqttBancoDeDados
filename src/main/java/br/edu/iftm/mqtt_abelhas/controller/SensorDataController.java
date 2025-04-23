@@ -29,6 +29,9 @@ public class SensorDataController {
         System.out.println("Stored SensorData: " + sensorData);
 
             try {
+                mqttClient = new MqttAsyncClient("wss://broker.hivemq.com:8884", UUID.randomUUID().toString());
+                mqttClient.connect().waitForCompletion();
+                System.out.println("Connected to MQTT broker.");
                 String jsonString = objectMapper.writeValueAsString(sensorData);
                 System.out.println("Publishing JSON: " + jsonString);
                 mqttService.publish("test/iftm/gabriel", jsonString);
