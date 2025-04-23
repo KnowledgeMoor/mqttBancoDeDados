@@ -14,13 +14,6 @@ public class SensorDataService {
 
     private MqttAsyncClient mqttClient;
 
-    @PostConstruct
-    public void init() throws MqttException {
-        
-        mqttClient = new MqttAsyncClient("wss://broker.hivemq.com:8884", UUID.randomUUID().toString());
-        mqttClient.connect().waitForCompletion();
-        System.out.println("Connected to MQTT broker.");
-    }
 
     public void publish(String topic, String payload) throws MqttException {
         MqttMessage message = new MqttMessage(payload.getBytes());
