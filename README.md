@@ -2,8 +2,6 @@
 
 Um sistema IoT para monitoramento de atividades de abelhas em colmeias que captura, armazena e transmite dados via MQTT.
 
-![Imagem de Colmeia](https://via.placeholder.com/800x400?text=Monitoramento+de+Colmeias)
-
 ## 📝 Visão Geral
 
 O Sistema de Monitoramento de Colmeias é uma solução IoT projetada para apicultores que desejam monitorar a atividade e condições ambientais de suas colmeias. O sistema utiliza sensores para coletar dados como:
